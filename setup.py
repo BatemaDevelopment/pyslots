@@ -24,4 +24,9 @@ setuptools.setup(
     package_dir={"": "py_slots"},
     packages=setuptools.find_packages(where="py_slots"),
     python_requires=">=3.6",
+    entry_points={
+        "console_scripts": [
+            "pyslots=pyslots.__main__:main",
+        ]
+    },
 )
