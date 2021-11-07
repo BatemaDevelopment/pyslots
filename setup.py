@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import setuptools
-import PYSlots.__init__ as __init__
+import py_slots.__init__ as __init__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
