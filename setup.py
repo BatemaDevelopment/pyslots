@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 import setuptools
+from .py_slots import __init__ as __init__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="PYSlots",
-    version="1.0.61",
+    version=__init__.VERSION,
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
     description="A little fun terminal Python Slots game!",
