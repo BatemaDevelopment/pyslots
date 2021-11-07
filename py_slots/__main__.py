@@ -1,4 +1,4 @@
-#!python
+#!/usr/bin/env python3
 import random as rand
 
 from . import __init__ as __init__

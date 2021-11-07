@@ -1,4 +1,4 @@
-#!python
+#!/usr/bin/env python3
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="PYSlots",
-    version="1.0.3",
+    version="1.0.4",
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
     description="A little fun terminal Python Slots game!",
