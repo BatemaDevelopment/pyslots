@@ -26,7 +26,7 @@ setuptools.setup(
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
-            "pyslots=pyslots.__main__:main",
+            "pyslots=py_slots.__main__:main()",
         ]
     },
 )
