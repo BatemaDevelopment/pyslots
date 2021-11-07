@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import setuptools
-import __main__
 import __init__
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -27,7 +26,7 @@ setuptools.setup(
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
-            "pyslots=__main__:main",
+            "pyslots=PYSlots.__main__:main",
         ]
     },
 )
