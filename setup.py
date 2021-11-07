@@ -3,16 +3,13 @@ from os.path import dirname, join
 import setuptools
 import PYSlots.__init__ as __init__
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
-
 setuptools.setup(
     name="PYSlots",
     version=__init__.VERSION,
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
     description="A little fun terminal Python Slots game!",
-    long_description=long_description,
+    long_description=open(join(dirname(__file__), "README.md")).read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Lukas-Batema/pyslots",
     project_urls={
