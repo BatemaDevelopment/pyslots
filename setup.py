@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import setuptools
-import py_slots.__main__ as __main__
 import py_slots.__init__ as __init__
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -23,12 +22,11 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "py_slots"},
-    packages=setuptools.find_packages(where="py_slots"),
+    packages=["pyslots"],
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
-            "pyslots=__main__:main",
+            "pyslots=py_slots.__main__:main",
         ]
     },
 )
