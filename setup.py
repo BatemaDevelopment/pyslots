@@ -1,28 +1,26 @@
-from os.path import dirname, join
 import setuptools
-import pyslots.__init__ as __init__
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 setuptools.setup(
-  name="pyslots",
-  version=__init__.VERSION,
-  description="A fun little terminal slots game!",
-  long_description=open(join(dirname(__file__), "README.md")).read(),
-  long_description_content_type="text/markdown",
-  url="https://github.com/Lukas-Batema/pyslots",
-  author="Lukas-Batema",
-  author_email="lukasbatema@gmail.com",
-  license="Apache",
-  packages=["pyslots"],
-  include_package_data=True,
-  install_requires=None,
-  keywords=["pyslots", "python slots", "slots", "slot machine", "terminal slots"],
-  classifiers=[
-    "Programming Language :: Python :: 3",
-  ],
-  python_requires=">=3.9",
-  entry_points={
-    "console_scripts": [
-      "pyslots=pyslots.__main__:main",
-    ]
-  },
+    name="PYSlots",
+    version="1.0.1",
+    author="Lukas-Batema",
+    author_email="lukasbatema@gmail.com",
+    description="A little fun terminal Python Slots game!",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/Lukas-Batema/pyslots",
+    project_urls={
+        "Bug Tracker": "https://github.com/Lukas-Batema/pyslots/issues",
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    package_dir={"": "py_slots"},
+    packages=setuptools.find_packages(where="py_slots"),
+    python_requires=">=3.6",
 )
