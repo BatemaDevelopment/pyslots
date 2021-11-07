@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="PYSlots",
-    version="1.0.5",
+    version="1.0.52",
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
     description="A little fun terminal Python Slots game!",
@@ -26,7 +26,7 @@ setuptools.setup(
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
-            "pyslots=pyslots.__main__:main",
+            "pyslots=py_slots.__main__:main",
         ]
     },
 )
