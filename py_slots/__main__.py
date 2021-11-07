@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import random as rand
 
-from . import __init__ as __init__
+import __init__
 
 def main():
   currentMoney = 1000
