@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="PYSlots",
-    version="1.0.1",
+    version="1.0.2",
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
     description="A little fun terminal Python Slots game!",
