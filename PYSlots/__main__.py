@@ -1,7 +1,5 @@
 import random as rand
 
-import __init__
-
 def main():
   currentMoney = 1000
   timesLooped = 0
