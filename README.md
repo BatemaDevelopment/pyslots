@@ -1,7 +1,6 @@
-# pyslots
+# PYSlots
 ## Install
-### macOS
-`pip install pyslots==1.0.6992`
+`pip install pyslots`
 
 ## Run
 `pyslots`
