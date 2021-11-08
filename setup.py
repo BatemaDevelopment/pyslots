@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 from os.path import dirname, join
 import setuptools
 
