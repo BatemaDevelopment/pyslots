@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from os.path import dirname, join
 import setuptools
-import PYSlots.__init__ as __init__
+import py_slots.__init__ as __init__
 
 setuptools.setup(
     name="PYSlots",
@@ -20,13 +20,13 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages=["PYSlots"],
+    packages=["py_slots"],
     install_requires=["wheel", "setuptools"],
     keywords=["slots", "python", "py"],
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
-            "pyslots=PYSlots.__main__:main",
+            "pyslots=py_slots.__main__:main",
         ]
     },
 )
