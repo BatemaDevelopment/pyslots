@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
+from os.path import dirname, join
 import setuptools
-
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
 
 setuptools.setup(
     name="PYSlots",
-    version="1.0.53",
+    version="1.0.6994",
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
-    description="A little fun terminal Python Slots game!",
-    long_description=long_description,
+    description="A fun terminal Python slots game!",
+    long_description=open(join(dirname(__file__), "README.md")).read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Lukas-Batema/pyslots",
     project_urls={
@@ -21,8 +19,8 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "py_slots"},
-    packages=setuptools.find_packages(where="py_slots"),
+    packages=["PYSlots"],
+    keywords=["python", "py", "slots", "pyslots"],
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [

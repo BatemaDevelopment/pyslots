@@ -1,2 +1,6 @@
-# pyslots
-A terminal slots programme in PY
+# PYSlots
+## Install
+`pip install pyslots`
+
+## Run
+`pyslots`
