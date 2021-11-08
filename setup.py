@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from os.path import dirname, join
 import setuptools
 # import PYSlots.__init__ as __init__
