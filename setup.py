@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     name="PYSlots",
-    version="1.0.699",
+    version="1.0.6991",
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
     description="A fun terminal Python slots game!",
