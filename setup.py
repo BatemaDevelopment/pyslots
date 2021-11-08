@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 from os.path import dirname, join
 import setuptools
-import PYSlots.__init__ as __init__
+# import PYSlots.__init__ as __init__
 
 setuptools.setup(
     name="PYSlots",
-    version=__init__.VERSION,
+    version="1.0.698",
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
     description="A fun terminal Python slots game!",
