@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from os.path import dirname, join
 import setuptools
-from PYSlots import __init__ as __init__
+import PYSlots.__init__ as __init__
 
 setuptools.setup(
     name="PYSlots",
