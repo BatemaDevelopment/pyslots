@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 from os.path import dirname, join
 import setuptools
-import PYSlots.__init__ as __init__
+from PYSlots import __init__ as __init__
 
 setuptools.setup(
     name="PYSlots",
     version=__init__.VERSION,
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
-    description="A little fun terminal Python Slots game!",
+    description="A fun terminal Python slots game!",
     long_description=open(join(dirname(__file__), "README.md")).read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Lukas-Batema/pyslots",
@@ -20,7 +20,9 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages=["pyslots"],
+    packages=["PYSlots"],
+    install_requires=["wheel", "setuptools"],
+    keywords=["slots", "python", "py"],
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
