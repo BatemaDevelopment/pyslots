@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     name="PYSlots",
-    version="1.0.6991",
+    version="1.0.6992",
     author="Lukas-Batema",
     author_email="lukasbatema@gmail.com",
     description="A fun terminal Python slots game!",
@@ -20,8 +20,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     packages=["PYSlots"],
-    install_requires=["wheel", "setuptools"],
-    keywords=["slots", "python", "py"],
+    keywords=["python", "py", "slots", "pyslots"],
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
