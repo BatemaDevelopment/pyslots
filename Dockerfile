@@ -9,8 +9,10 @@ RUN mkdir /slots
 
 WORKDIR /slots
 
+COPY . .
+
 RUN python3 -m pip install --upgrade build
 RUN python3 -m build
 
 RUN python3 -m pip install --upgrade twine
-RUN python3 -m twine upload --repository testpypi dist/* $TEST_PYPI_USERNAME $TEST_PYPI_PASSWORD
+RUN python3 -m twine upload -u $TEST_PYPI_USERNAME -p $TEST_PYPI_PASSWORD --repository testpypi dist/*
