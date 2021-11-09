@@ -1,71 +1,71 @@
 import random as rand
 
 def main():
-  currentMoney = 1000
-  timesLooped = 0
-  userInput = "Press \"Y\" to continue, or press anything else to end:"
-  stoppingMsg = "Stopping..."
-  dividerMsg = "=========="
-  slotsMessage = "Slot Numbers"
+  current_money = 1000
+  times_looped = 0
+  user_input = "Press \"Y\" to continue, or press anything else to end:"
+  stopping_msg = "Stopping..."
+  divider_msg = "=========="
+  slots_msg = "Slot Numbers"
 
-  print(dividerMsg)
-  print(slotsMessage)
-  print(dividerMsg)
+  print(divider_msg)
+  print(slots_msg)
+  print(divider_msg)
 
-  while currentMoney > 0:
-    if timesLooped >= 1:
-      print(userInput)
-      print(dividerMsg)
-      userAnswer = input()
+  while current_money > 0:
+    if times_looped >= 1:
+      print(user_input)
+      print(divider_msg)
+      user_ans = input()
     
-      if userAnswer == "y" or userAnswer == "Y" or userAnswer == "yes" or userAnswer == "Yes":
-        print(dividerMsg)
-        print(slotsMessage)
-        print(dividerMsg)
+      if user_ans == "y" or user_ans == "Y" or userAnswer == "yes" or user_ans == "Yes":
+        print(divider_msg)
+        print(slots_msg)
+        print(divider_msg)
       else:
-        print(stoppingMsg)
-        print(dividerMsg)
+        print(stopping_msg)
+        print(divider_msg)
         break
     
-    slotOne = rand.randint(1,6)
-    print(slotOne)
+    slot_one = rand.randint(1,6)
+    print(slot_one)
   
-    slotTwo = rand.randint(1,6)
-    print(slotTwo)
+    slot_two = rand.randint(1,6)
+    print(slot_two)
   
-    slotThree = rand.randint(1,6)
-    print(slotThree)
+    slot_three = rand.randint(1,6)
+    print(slot_three)
   
-    print(dividerMsg)
-    moneyGambled = rand.randrange(100,500,100)
+    print(divider_msg)
+    money_gambled = rand.randrange(100,500,100)
   
-    if slotOne == slotTwo == slotThree:
-      currentMoney += moneyGambled
-      print("$" + str(currentMoney) + ".00")
-      print(dividerMsg)
+    if slot_one == slot_two == slot_three:
+      current_money += money_gambled
+      print("$" + str(current_money) + ".00")
+      print(divider_msg)
     else:
-      currentMoney -= moneyGambled
-      if currentMoney < 0:
-        currentMoney = 0
+      current_money -= money_gambled
+      if current_money < 0:
+        current_money = 0
       
-        print("$" + str(currentMoney) + ".00")
+        print("$" + str(current_money) + ".00")
     
-        print(dividerMsg)
-        print(stoppingMsg)
-        print(dividerMsg)
+        print(divider_msg)
+        print(stopping_msg)
+        print(divider_msg)
       
         break
-      elif currentMoney == 0:
-        print("$" + str(currentMoney) + ".00")
+      elif current_money == 0:
+        print("$" + str(current_money) + ".00")
     
-        print(dividerMsg)
-        print(stoppingMsg)
-        print(dividerMsg)
+        print(divider_msg)
+        print(stopping_msg)
+        print(divider_msg)
         break
       else:
-        print("$" + str(currentMoney) + ".00")
-        print(dividerMsg)
-    timesLooped += 1
+        print("$" + str(current_money) + ".00")
+        print(divider_msg)
+    times_looped += 1
     
 if __name__ == "__main__":
   main()
