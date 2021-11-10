@@ -1,0 +1,18 @@
+# Add 'documentation' label to any documentation file changes
+documentation:
+  - .gitignore
+  - .gitattributes
+  - README.md
+  - LICENSE
+  - .github/*/*.*
+  - .github/*/*/*.*
+  
+# Add 'test' label to any change to PYSlots/test/**/* files within the source dir
+test:
+  - tests/*.*
+  - tests/*/*.*
+
+# Add 'source' label to any change to src files within the source dir
+source:
+  - PYSlots/*.*
+  - PYSlots/*/*.*
