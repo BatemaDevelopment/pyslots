@@ -1,0 +1,9 @@
+{
+  "map": {
+    "PYSlots Version:": "pyslots_version"
+  },
+  "pyslots_version": {
+    "1.2.0": "1.2.0b",
+    "1.1.1": "old-1.1.1"
+  }
+}
