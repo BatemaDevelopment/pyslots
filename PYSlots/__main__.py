@@ -9,9 +9,12 @@ def main():
     args = parse_args()
 
     if args.update:
-        update()
-    elif args.version:
-        print("PYSlots Version:", __init__.VERSION)
+        print("This feature currently does not work. Please use 'pip install --upgrade pyslots', to update.")
+        sys.exit(0)
+        # update()
+    if args.version:
+        print("This feature currently does not work! Check back later.")
+        # print("PYSlots Version:", __init__.VERSION)
         sys.exit(0)
     else:
         current_money = 1000
@@ -53,10 +56,18 @@ def main():
             money_gambled = rand.randrange(100, 500, 1)
 
             if slot_one == slot_two == slot_three:
-                current_money += money_gambled
+                current_money += round(money_gambled, None)
                 print("$" + str(current_money) + ".00")
                 print(divider_msg)
-            else:
+            elif slot_one == slot_two or slot_two == slot_three:
+                current_money += round(money_gambled / 4, None)
+                print("$" + str(current_money) + ".00")
+                print(divider_msg)
+            elif slot_one == slot_three:
+                current_money += round(money_gambled / 16, None)
+                print("$" + str(current_money) + ".00")
+                print(divider_msg)
+            elif slot_one != slot_two != slot_three:
                 current_money -= money_gambled
                 if current_money < 0:
                     current_money = 0
@@ -79,6 +90,11 @@ def main():
                     print("$" + str(current_money) + ".00")
                     print(divider_msg)
             times_looped += 1
+    try:
+        if args.help:
+            sys.exit(0)
+    except AttributeError:
+        pass
 
 if __name__ == "__main__":
     main()

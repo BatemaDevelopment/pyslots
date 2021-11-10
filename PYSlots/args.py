@@ -11,6 +11,7 @@ def parse_args():
     )
     parser.add_argument(
         "--update",
+        "-u",
         action="store_true",
         help="Update to the latest stable version",
     )
