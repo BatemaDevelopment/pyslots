@@ -9,12 +9,10 @@ def main():
     args = parse_args()
 
     if args.update:
-        print("This feature currently does not work. Please use 'pip install --upgrade pyslots', to update.")
+        update()
         sys.exit(0)
-        # update()
     if args.version:
-        print("This feature currently does not work! Check back later.")
-        # print("PYSlots Version:", __init__.VERSION)
+        print("PYSlots Version:", __init__.VERSION)
         sys.exit(0)
     else:
         current_money = 1000
