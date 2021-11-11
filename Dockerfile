@@ -2,8 +2,8 @@ FROM python:3.8-alpine
 
 RUN apk add --no-cache musl-dev libffi-dev gcc
 
-ARG TEST_PYPI_USERNAME
-ARG TEST_PYPI_PASSWORD
+ARG PYPI_USERNAME
+ARG PYPI_PASSWORD
 
 RUN mkdir /slots
 
