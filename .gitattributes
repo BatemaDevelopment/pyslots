@@ -1,0 +1,9 @@
+# linguist-detectable
+/.github/*.yml linguist-detectable
+/.github/workflows/*.yml linguist-detectable
+/*.md linguist-detectable
+
+# -liguist-documentatiom
+/.github/*.yml -linguist-documentation
+/.github/workflows/*.yml -linguist-documentation
+/*.md -linguist-documentation
