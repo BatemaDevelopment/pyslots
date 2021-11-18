@@ -1,9 +1,10 @@
 import random as rand
 import sys, os
 from . import __init__ as __init__
+from . import original_gamemode as og_gm
+from .other_games import menu as other_games_menu 
 from .args import parse_args
 from .update import update
-
 
 def main():
     args = parse_args()
@@ -15,79 +16,22 @@ def main():
         print("PYSlots Version:", __init__.VERSION)
         sys.exit(0)
     else:
-        current_money = 1000
-        times_looped = 0
-        user_input = "Press \"Y\" to continue, or press anything else to end:"
-        stopping_msg = "Stopping..."
+        input_msg = "Welcome to PYSlots! Type in the number of the game you want to play!\n1) Original (Originated in v1.1.1)\n2) Other Games\n3) Quit"
         divider_msg = "=========="
-        slots_msg = "Slot Numbers"
 
-        print(divider_msg)
-        print(slots_msg)
-        print(divider_msg)
+        print(input_msg + "\n" + divider_msg)
 
-        while current_money > 0:
-            if times_looped >= 1:
-                print(user_input)
-                print(divider_msg)
-                user_ans = input()
-
-                if user_ans == "y" or user_ans == "Y" or user_ans == "yes" or user_ans == "Yes":
-                    print(divider_msg)
-                    print(slots_msg)
-                    print(divider_msg)
-                else:
-                    print(stopping_msg)
-                    print(divider_msg)
-                    break
-
-            slot_one = rand.randint(1, 6)
-            print(slot_one)
-
-            slot_two = rand.randint(1, 6)
-            print(slot_two)
-
-            slot_three = rand.randint(1, 6)
-            print(slot_three)
-
-            print(divider_msg)
-            money_gambled = rand.randrange(100, 500, 1)
-
-            if slot_one == slot_two == slot_three:
-                current_money += round(money_gambled, None)
-                print("$" + str(current_money) + ".00")
-                print(divider_msg)
-            elif slot_one == slot_two or slot_two == slot_three:
-                current_money += round(money_gambled / 4, None)
-                print("$" + str(current_money) + ".00")
-                print(divider_msg)
-            elif slot_one == slot_three:
-                current_money += round(money_gambled / 16, None)
-                print("$" + str(current_money) + ".00")
-                print(divider_msg)
-            elif slot_one != slot_two != slot_three:
-                current_money -= money_gambled
-                if current_money < 0:
-                    current_money = 0
-
-                    print("$" + str(current_money) + ".00")
-
-                    print(divider_msg)
-                    print(stopping_msg)
-                    print(divider_msg)
-
-                    break
-                elif current_money == 0:
-                    print("$" + str(current_money) + ".00")
-
-                    print(divider_msg)
-                    print(stopping_msg)
-                    print(divider_msg)
-                    break
-                else:
-                    print("$" + str(current_money) + ".00")
-                    print(divider_msg)
-            times_looped += 1
+        user_game_selection = input()
+        if user_game_selection == "1":
+            og_gm.og_game()
+        elif user_game_selection == "2":
+            other_games_menu()
+        elif user_game_selection == "3":
+            print("Sorry to see you go! Hope you come visit soon!")
+            sys.exit(0)
+        else:
+            print("Error 404: Game Not Found")
+            sys.exit(404)
     try:
         if args.help:
             sys.exit(0)
