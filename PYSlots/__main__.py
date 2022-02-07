@@ -1,100 +1,54 @@
+# import modules
 import random as rand
 import sys, os
 from . import __init__ as __init__
+from . import original_gamemode as og_gm
+from . import user_input_gamemode as user_input_gm
+from .other_games import menu as other_games_menu 
 from .args import parse_args
 from .update import update
-
-
+# --------------------------------------------------
 def main():
+    """
+    main():
+        - Description: 
+            The Main Menu Page
+        - Arguments:
+            None
+    """
+
     args = parse_args()
 
     if args.update:
-        print("This feature currently does not work. Please use 'pip install --upgrade pyslots', to update.")
+        update()
         sys.exit(0)
-        # update()
     if args.version:
-        print("This feature currently does not work! Check back later.")
-        # print("PYSlots Version:", __init__.VERSION)
+        print("PYSlots Version:", __init__.VERSION)
         sys.exit(0)
     else:
-        current_money = 1000
-        times_looped = 0
-        user_input = "Press \"Y\" to continue, or press anything else to end:"
-        stopping_msg = "Stopping..."
+        input_msg = "Welcome to PYSlots! Type in the number of the game you want to play!\n1) Original (Originated in v1.1.1)\n2) Manual Gamble (Originated in 1.3.0)\n3) Other Games\n4) Quit"
         divider_msg = "=========="
-        slots_msg = "Slot Numbers"
 
-        print(divider_msg)
-        print(slots_msg)
-        print(divider_msg)
+        print(input_msg + "\n" + divider_msg) # 
 
-        while current_money > 0:
-            if times_looped >= 1:
-                print(user_input)
-                print(divider_msg)
-                user_ans = input()
-
-                if user_ans == "y" or user_ans == "Y" or user_ans == "yes" or user_ans == "Yes":
-                    print(divider_msg)
-                    print(slots_msg)
-                    print(divider_msg)
-                else:
-                    print(stopping_msg)
-                    print(divider_msg)
-                    break
-
-            slot_one = rand.randint(1, 6)
-            print(slot_one)
-
-            slot_two = rand.randint(1, 6)
-            print(slot_two)
-
-            slot_three = rand.randint(1, 6)
-            print(slot_three)
-
-            print(divider_msg)
-            money_gambled = rand.randrange(100, 500, 1)
-
-            if slot_one == slot_two == slot_three:
-                current_money += round(money_gambled, None)
-                print("$" + str(current_money) + ".00")
-                print(divider_msg)
-            elif slot_one == slot_two or slot_two == slot_three:
-                current_money += round(money_gambled / 4, None)
-                print("$" + str(current_money) + ".00")
-                print(divider_msg)
-            elif slot_one == slot_three:
-                current_money += round(money_gambled / 16, None)
-                print("$" + str(current_money) + ".00")
-                print(divider_msg)
-            elif slot_one != slot_two != slot_three:
-                current_money -= money_gambled
-                if current_money < 0:
-                    current_money = 0
-
-                    print("$" + str(current_money) + ".00")
-
-                    print(divider_msg)
-                    print(stopping_msg)
-                    print(divider_msg)
-
-                    break
-                elif current_money == 0:
-                    print("$" + str(current_money) + ".00")
-
-                    print(divider_msg)
-                    print(stopping_msg)
-                    print(divider_msg)
-                    break
-                else:
-                    print("$" + str(current_money) + ".00")
-                    print(divider_msg)
-            times_looped += 1
+        user_game_selection = input()
+        if user_game_selection == "1": # If the user inputs the number 1, start the "original game"
+            og_gm.og_game() # Start the "original game"
+        elif user_game_selection == "2": # If the user inputs the number 2, start the "user input game"
+            user_input_gm.user_input_game() # Start the "user input game"
+        elif user_game_selection == "3": # If the user inputs the number 3, go to the "other games" menu
+            other_games_menu() # Open the "other games menu"
+        elif user_game_selection == "4": # If the user inputs the number 4, exit the programme
+            print("Sorry to see you go! Hope you come visit soon!") # Print the apology message
+            sys.exit(0) # Exit the programme
+        else:
+            print("Error 404: Game Not Found") # Uh oh, they inputted a number that is not in the range from 1 to 4... That's a lot of damage...
+            sys.exit(404) # Exit with the 404 Code (lol)
     try:
-        if args.help:
-            sys.exit(0)
-    except AttributeError:
-        pass
+        if args.help: # If the argument given is --help, run the below code
+            sys.exit(0) # Exit programme
+    except AttributeError: # A wild Attribute Error appears...
+        pass # Ash Ketchum ran from the wild Attribute Error...
 
 if __name__ == "__main__":
     main()
