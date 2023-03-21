@@ -1,0 +1,51 @@
+{
+  "name": "BatemaDevelopment's Alpine (3.17) NodeJS LTS Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
+  "settings": {
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.tabSize": 2,
+    "git.autofetch": true,
+    "editor.accessibilitySupport": "off",
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "files.associations": {
+      "*.html": "html"
+    },
+    "cSpell.language": "en-GB, en-US",
+    "workbench.editorAssociations": {
+      "*.zip": "default"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.postCommitCommand": "push",
+    "remoteHub.commitDirectlyWarning": "off",
+    "liveshare.presence": true,
+    "redhat.telemetry.enabled": false,
+    "workbench.startupEditor": "welcomePage",
+    "sonarlint.rules": {
+      "javascript:S125": {
+        "level": "off"
+      }
+    },
+    "editor.inlineSuggest.enabled": true,
+    "css.format.spaceAroundSelectorSeparator": true,
+    "github.copilot.enable": {
+      "*": true,
+      "yaml": false,
+      "plaintext": true,
+      "markdown": false
+    },
+    "swift.backgroundCompilation": true,
+    "swift.diagnostics": true,
+    "svelte.enable-ts-plugin": true
+  }
+}
